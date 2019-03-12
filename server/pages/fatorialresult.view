@@ -1,0 +1,6 @@
+<html>
+    <body>
+        <label>Fatorial de </label> <out value="#{numero.toString}" />
+        é <strong> <out value="#{resultado.toString}" /> </strong>
+    </body>
+</html>
