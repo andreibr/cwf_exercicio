@@ -1,12 +1,13 @@
 #include "logradouro_dao.h"
+#include "model/logradouro.h"
 #include <cwf/sqlquery.h>
 #include <cwf/sqldatabasestorage.h>
 
-extern CWF::SqlDatabaseStorage storage;
+extern CWF::SqlDatabaseStorage conexao;
 
 QJsonArray LogradouroDAO::inserir(const Logradouro &logradouro)
 {
-    CWF::SqlQuery qry(storage);
+    CWF::SqlQuery qry(conexao.getDatabase());
     qry.prepare("insert into logradouro(logr_pais, logr_estado, logr_cidade, logr_bairro, logr_logradouro, logr_cep)"
                 "values(:pais, :estado, :cidade, :bairro, :logradouro, :cep);");
     qry.bindValue(":pais", logradouro.getLogr_pais());
@@ -36,7 +37,7 @@ bool LogradouroDAO::salvar(const Logradouro &logradouro)
 
 QJsonArray LogradouroDAO::buscar()
 {
-    CWF::SqlQuery qry(storage);
+    CWF::SqlQuery qry(conexao.getDatabase());
     qry.exec("select * from logradouro");
     return qry.toJson();
 }

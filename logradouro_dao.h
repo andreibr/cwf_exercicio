@@ -2,7 +2,7 @@
 #define LOGRADOURO_DAO_H
 
 #include <cwf/qlistobject.h>
-#include "logradouro.h"
+#include "model/logradouro.h"
 
 class LogradouroDAO
 {

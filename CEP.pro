@@ -7,7 +7,6 @@ CONFIG -= app_bundle
 DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
-        logradouro_dao.cpp \
         main.cpp
 
 INCLUDEPATH += /usr/lib
@@ -33,6 +32,5 @@ DISTFILES += \
     server/pages/fatorialresult.view
 
 HEADERS += \
-    logradouro.h \
-    logradouro_dao.h
+    model/logradouro.h
 
