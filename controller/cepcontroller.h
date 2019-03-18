@@ -5,11 +5,6 @@
 #include <cwf/sqlquery.h>
 #include <cwf/response.h>
 #include <cwf/response.h>
-#include <QJsonObject>
-#include <cwf/model.h>
-
-#include "model/logradouro.h"
-#include "dao/cepdao.h"
 
 class CepController : public CWF::Controller
 {

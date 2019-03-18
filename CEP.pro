@@ -8,7 +8,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         controller/cepcontroller.cpp \
-        dao/cepdao.cpp \
         main.cpp
 
 INCLUDEPATH += /usr/lib
@@ -34,7 +33,5 @@ DISTFILES += \
     server/pages/fatorialresult.view
 
 HEADERS += \
-    controller/cepcontroller.h \
-    dao/cepdao.h \
-    model/logradouro.h
+    controller/cepcontroller.h
 
