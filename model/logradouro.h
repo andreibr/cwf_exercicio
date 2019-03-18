@@ -6,6 +6,7 @@
 class Logradouro : public QObject
 {
     Q_OBJECT
+private:
     int logr_id;
     QString logr_pais;
     QString logr_estado;
@@ -23,7 +24,7 @@ public slots:
     void setLogr_pais(const QString &value) { logr_pais = value; }
 
     QString getLogr_estado() const { return logr_estado; }
-    void setLogr_estados(const QString &value) { logr_estado = value; }
+    void setLogr_estado(const QString &value) { logr_estado = value; }
 
     QString getLogr_cidade() const { return logr_cidade; }
     void setLogr_cidade(const QString &value) { logr_cidade = value; }
